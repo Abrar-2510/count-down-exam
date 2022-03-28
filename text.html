@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title> final exam 🙂</title>
+    <link href="font-awesome.css" rel="stylsheet">
+    <link rel="stylesheet" href="https://fontawesome.com/v5/icons/link?s=solid">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    *{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url("meme.jpg");
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; */
+
+}
+
+#demo{
+    color: #fff;  
+    width: 4em;
+    height: 4em;
+    padding: 1em;
+    margin: 1em;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    justify-content: space-around;
+    word-spacing: 42px;
+    font-size: 21px;
+    width: 29%;
+    margin-top: 178px;
+    margin-left: 34%;
+    border: 2px solid #fff;
+    height: 24px;
+    width: 23%;
+    border-radius: 0px;
+}
+
+
+.container{
+    display: flex;
+    justify-content: space-around;
+    color: #fff;
+    text-align: center;
+    font-weight: 700;
+    font-size: 34px;
+    margin-top: 14%;
+}
+.top{
+    margin-right: 29%;
+}
+.bottom{
+    margin-right: 28%;
+}
+
+.copy-write{
+    margin-top: 10px;
+    position: absolute;
+    width: 320px;
+    margin-left: 40%;
+    top: 0px;
+    right: 0;
+    color: rgba(100,110,145,255);
+}
+</style>
+</head>
+<body>
+
+    <p id="demo"></p>
+
+    <div class="container">
+            <p class="top">When there is  <br> a countdown <br> for our <br> final exam, </p>
+       
+        <p class="bottom">  And find out <br> that you <br> will be... <br> in 3rd secondary.</p>     
+    </div>
+<p class="copy-write"> Developed by Abrar 🔗  Designed by Radwa  </p>
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("May 8, 2022 21:0:0").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+
+</script>
+
+
+</body>
+</html>
+
